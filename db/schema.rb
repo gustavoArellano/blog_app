@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_12_30_052705) do
 
-  create_table "comments", force: :cascade do |t|
+  create_table :comments, force: :cascade do |t|
     t.string "name"
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
