@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 2019_12_30_052705) do
     t.integer "post_id"
   end
 
+  add_foreign_key :comments, 
+                  :posts, 
+                  column: :post_id
+  add_index :comments, :post_id
+
   create_table :posts, force: :cascade do |t|
     t.string "title"
     t.string "string"
